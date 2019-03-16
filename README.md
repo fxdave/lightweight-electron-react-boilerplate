@@ -1,21 +1,9 @@
-# Lightweight Electron React Boilerplate
+# Lightweight Electron React Boilerplate 
+This branch is for those, who wants to compile their main thread too.
 
-This is a lightweight electron-react boilerplate without unnecessary libraries, if you want to see an overcomplicated solution please take a look at here: https://github.com/electron-react-boilerplate/electron-react-boilerplate
+## Why?
+I found it a bit complicated to setup, so this should be easy for everyone.
 
-## When to use
-
-If you'd like to use simple but powerful solutions, this is for you. If it's a new project may you don't want to use javascript.
-
-## Scripts
-
-```bash
-npm run dev # for development
-npm run start # for build and run
-npm run package-linux # for create package for linux and you can easily add platforms
-```
-
-## If you want ES6 import syntax for main process 
-However I don't think that it's a good idea, because `__dirname` is different when it's bundled. But you can add multiple targets in webpack.config.js and you can change the main entry (in package.json) to the built one.
-
-## Contributing
-Feel free to open any issue.
+## Why not?
+your code will not be there where you actually write. __dirname won't be the same.
+Also it is tricky, but good luck for that!

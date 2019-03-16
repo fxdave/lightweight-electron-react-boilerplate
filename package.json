@@ -2,17 +2,17 @@
   "name": "electrontest",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "src/main.built.js",
   "devDependencies": {
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.0"
   },
   "scripts": {
-    "start": "npm run build-renderer ; electron .",
-    "dev": "npm run dev-renderer ; electron .",
-    "build-renderer": "env NODE_ENV=production webpack ./src/renderer.js",
-    "dev-renderer": "env NODE_ENV=development webpack ./src/renderer.js",
+    "start": "npm run build-prod; electron .",
+    "dev": "npm run build-dev; electron .",
+    "build-prod": "env NODE_ENV=production webpack",
+    "build-dev": "env NODE_ENV=development webpack",
     "package-linux": "electron-builder build --linux"
   },
   "author": "",
