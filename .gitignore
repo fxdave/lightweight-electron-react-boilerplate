@@ -1,4 +1,3 @@
 node_modules
 dist
-renderer.built.js
-main.built.js
+src/build

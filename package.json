@@ -2,7 +2,7 @@
   "name": "electrontest",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.built.js",
+  "main": "src/build/main.js",
   "devDependencies": {
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",
@@ -11,8 +11,8 @@
   "scripts": {
     "start": "npm run build-prod; electron .",
     "dev": "npm run build-dev; electron .",
-    "build-prod": "env NODE_ENV=production webpack",
-    "build-dev": "env NODE_ENV=development webpack",
+    "build-prod": "env NODE_ENV=production webpack; sucrase ./src/main -d ./src/build --transforms jsx,imports",
+    "build-dev": "env NODE_ENV=development webpack; sucrase ./src/main -d ./src/build --transforms jsx,imports",
     "package-linux": "electron-builder build --linux"
   },
   "author": "",

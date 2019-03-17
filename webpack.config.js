@@ -18,31 +18,16 @@ const loaders = {
   ]
 }
 
-/**
- * Here we tell webpack 2 configs, the first is for the main thread, the second is for the renderer.
- */
-module.exports = [{
-  mode: process.env.NODE_ENV || 'production' ,
-  target: 'node', // node target excludes internal node packages like 'fs'
-  entry: {
-    main: './src/main.js'
-  },
-  // this will emit src/main.built.js
-  output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: '[name].built.js' 
-  },
-  module: loaders
-}, {
+module.exports = {
   mode: process.env.NODE_ENV || 'production' ,
   target: 'web', // default
   entry: {
-    renderer: './src/renderer.js',
+    renderer: './src/renderer/renderer.js',
   },
   // this will emit /src/renderer.built.js
   output: {
-    path: path.resolve(__dirname, 'src'),
+    path: path.resolve(__dirname, 'src/build'),
     filename: '[name].built.js'
   },
   module: loaders
-}];
+}
