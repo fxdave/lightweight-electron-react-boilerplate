@@ -18,4 +18,4 @@ npm run package-linux # for create package for linux and you can easily add plat
 However I don't think it's a good idea, because `__dirname` is different when it's bundled. But configuring it is hard so I created another branch for you: `variation/es6main`.
 
 ## Contributing
-Feel free to open any issue.
+Feel free to open any issues.
